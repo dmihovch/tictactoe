@@ -16,16 +16,21 @@ int main(void){
   if(player1.mark == 'O'){player2.mark = 'X';}
   player_two_name(player2.name);
   printf("\nPlayer 2: Your mark is %c\n",player2.mark);
-
+  
   //start working on game logic
   bool playMore = true;
   while(playMore)
   {
-    int board[9] = {0,0,0,
-                    0,0,0,
-                    0,0,0};
+    printf("Press ENTER to Start!\n");
+    getchar(); //try a better way, don't this, sloppy ash
+    int board[9] = {0,0,0,0,0,0,0,0,0};
+    bool validGameState = true;
+    while(validGameState){
+      printBoard(board);
+      validGameState = false; 
+    }
     
-
+    playMore = false;
   }
   return 1;
 }
