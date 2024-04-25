@@ -1,6 +1,3 @@
-vim:
-	nvim main.c logic.c funcs.h
-
 run: tictactoe
 	./tictactoe
 all:
