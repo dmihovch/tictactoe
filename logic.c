@@ -70,3 +70,26 @@ void printBoard(int board[]){
   }
   println();
 }
+//X 88
+//O 79
+void playerTurn(struct Player *p,int *board){
+  printf("%s: Choose a spot\n",p->play);
+  int choice;
+  bool invalidMsg = false;
+  bool notValid = true;
+  while(notValid){
+    if(invalidMsg){
+      printf("Invalid input, try again");
+    }
+    scanf("%d",&choice);
+    if(choice < 1 || choice > 9){
+      continue;
+    }
+    if(board[choice-1]!=0){
+      continue;
+    }
+    notValid = false;
+  }
+  board[choice-1] = p->markAsc;
+}
+
