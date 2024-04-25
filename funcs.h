@@ -9,4 +9,6 @@ void player_one_name(char*);
 char player_one_mark();
 void player_two_name(char*);
 char get_mark();
+void printBoard(int*);
+void println();
 

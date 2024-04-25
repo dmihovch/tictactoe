@@ -1,5 +1,7 @@
 #include "funcs.h"
-
+void println(){
+  printf("\n");
+}
 void get_name(char* name){
   if(fgets(name,sizeof(name),stdin)==NULL){
     printf("Error capturing name, try again");
@@ -52,4 +54,19 @@ char player_one_mark(){
   mark = get_mark();
   printf("\nPlayer 1: Your mark is %c\n",mark);
   return mark;
+}
+
+void printBoard(int board[]){
+  println();
+  int count = 0;
+  for(int i = 0; i<9; i++){
+    count++;
+    printf("| %d ",board[i]);
+    if(count == 3){
+      printf("|\n");
+      count = 0;
+    }
+
+  }
+  println();
 }
